@@ -1,55 +1,88 @@
 <p align="center">
-  <img src="https://i.imgur.com/Ua7udoS.png" alt="Traffic Examination"/>
+  <img src="https://miro.medium.com/v2/resize:fit:800/0*emIINniCsfbfLxbq" alt="Traffic Examination"/>  <img src="https://www.devopspertise.com/img/blog/title-azure-alerts-explore.png"/> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQagoe7n9gFbcWj7oEwbO-Uim_6OqdQONiDeA&s"
 </p>
 
-<h1>Testing VPN Connection and IP Location with Azure Virtual Machines</h1>
-This tutorial covers testing the IP address on a local machine, checking the IP location on a Virtual Machine (VM) without a VPN, and testing the IP location with a VPN on the local machine.
+<h1>Monitor and Log Data with Azure Monitor and Log Analytics / Create Alerts and visualize data creating dashboards.</h1>
+This projects covers a centralized dashboard to monitor and manage data of created VM environments. Track the health, performance, and security of your virtual machines, troubleshoot issues, and ensure smooth operations with ease.
 
 <h2>Environments and Technologies Used</h2>
 
-- **Microsoft Azure (Virtual Machines/Compute)**
-- **Remote Desktop (RDP)**
-- **ProtonVPN (Free Plan)**
-- **Browser (for testing IP location)**
-- **WhatIsMyIPAddress (IP address checker)**
+
+  - Application Insights
+  - Virtual Machines
+  - Log Analytics Workspaces
+  - Azure Monitor
+  - Log Analytics Alerts
+  - Dashboards
+  - Dashboard data Query
 
 <h2>Operating Systems Used</h2>
 
 - **Windows 10 (VM on Azure)**
-- **Local Machine (for VPN setup)**
+  
 
 <h2>High-Level Steps</h2>
 
-1. **Check Local Machine’s IP Address**  
-   Open a browser on the local machine and go to [WhatIsMyIPAddress](https://whatismyipaddress.com/). Note the IP address displayed.
-
-2. **Test IP Location Without VPN on Virtual Machine**  
-   Log into a Virtual Machine (VM) on Azure. Open a browser and visit [WhatIsMyIPAddress](https://whatismyipaddress.com/) to check the IP address.
-
-   [![Watch the video on Testing IP Location Without VPN](https://img.youtube.com/vi/YFNkjJf3lo8/0.jpg)](https://www.youtube.com/watch?v=YFNkjJf3lo8)
-
-   *Click the image or [here](https://www.youtube.com/watch?v=YFNkjJf3lo8) to watch a video demo.*
+1. **Create VM machine in Azure**  
 
 
-3. **Test IP Location With VPN on Virtual Machine**  
-   Install ProtonVPN on the virtual machine. Connect to a VPN server in a different country (e.g., Japan). Visit [WhatIsMyIPAddress](https://whatismyipaddress.com/) and note the new IP address.
 
-   [![Watch the video on Testing IP Location With VPN](https://img.youtube.com/vi/zyeGKbw1tGI/0.jpg)](https://www.youtube.com/watch?v=zyeGKbw1tGI)
+https://github.com/user-attachments/assets/b57cb825-dbdd-45ee-9c01-99518728ae87
 
-   *Click the image or [here](https://www.youtube.com/watch?v=zyeGKbw1tGI) to watch a video demo.*
 
-4. **Clean Up Azure Resources**  
-   Delete the resource group containing the VM in Azure to avoid unnecessary charges.
 
-   <p align="center">
-     <img src="https://i.ibb.co/8mg1jKj/Screenshot-2024-11-29-at-11-18-49-PM.png" alt="Clean Up Resources"/>
-   </p>
 
+
+
+2. **Enable Azure Monitor**  
+  
+
+
+https://github.com/user-attachments/assets/41933b8a-c4d2-4aca-af22-5175a039cf4f
+
+
+
+3. **Enable Log Analytics**  
+  1. In the Azure Portal, search for Log Analytics Workspaces.
+2. Click Create and provide the following:
+
+    3. Name: Enter a name (e.g., MyLogAnalyticsWorkspace).
+    4. Region: Select the same region as your VM.
+    5. Resource Group: Choose the resource group of your VM.
+
+After creation, navigate to the workspace and note its Workspace ID and Key.
+
+https://github.com/user-attachments/assets/d3f0bb35-1eac-4830-8e6e-36ca6998d1b2
+
+
+
+4. **Configure Alerts**
+
+NOTE: You can also set up recommended alert rules which will advise best practices to avoid data loss as well as generate an alert which you will be notified either via email or SMS.
+
+https://github.com/user-attachments/assets/f82099e0-90de-4aef-a090-1b7a8f5af65e
+
+
+
+5.  **Build a Custom Dashboard with Queries and Metrics to determine best practices to improve Virtual Machines.**
+   You can download the results of the total query as CSV for further reference. In a query where there is a lot of data to be fulfilled across multiple periods of time, a chart can be generated from the dashboard. In this case, all the alerts created needed more data in order to process a chart. Metrics can be shown for overall usage of VM as well as Alerts and Log Analytics workspaces created by creating a custom dashboard, allowing you to monitor performance, usage and use.
+
+
+
+https://github.com/user-attachments/assets/bfa402cf-27af-4b10-8d98-5d4e23cb11e1
+
+
+
+7. **Link VM to Log Analytics Workspace (Optional)**
+   
+NOTE: This approach is used to showcase how it used to work to create log analytics with the VM/RG. Currently is deprecated.
+
+https://github.com/user-attachments/assets/68ea7f7b-3e34-4970-a865-41035e1d5bdf
 <h2>Actions and Observations</h2>
 
 <p>
-  The local machine’s IP address shows the actual location. The VM’s IP address reflects the region of the VM. With ProtonVPN enabled, the local machine’s IP address will show the location of the VPN server (e.g., Japan).
+  With this tutorial you will be able to set up an Azure resource monitoring solution to track metrics and logs for a virtual machine (VM).
 </p>
 
 <h2>Conclusion</h2>
-This demonstration illustrates how VPNs alter IP addresses and their impact on network security.
+This demonstration illustrates a no-code monitoring and logging solution for your Azure VM, complete with performance insights, log aggregation, and real-time alerts, all accessible via a centralized dashboard.
