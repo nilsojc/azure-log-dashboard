@@ -64,6 +64,10 @@ NOTE: You can also set up recommended alert rules which will advise best practic
 
 https://github.com/user-attachments/assets/f82099e0-90de-4aef-a090-1b7a8f5af65e
 
+With this alert created you will receive messages and email notifications with log information. One example of this can be for a VM stopped for the client as shown below:
+
+![image](https://github.com/user-attachments/assets/46ba5bc7-ac25-4abc-92e0-86c8e69dcd8f)
+
 
 
 5.  **Build a Custom Dashboard with Queries and Metrics to determine best practices to improve Virtual Machines.**
