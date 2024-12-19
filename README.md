@@ -42,13 +42,15 @@ https://github.com/user-attachments/assets/41933b8a-c4d2-4aca-af22-5175a039cf4f
 
 
 
-3. **Enable Log Analytics**  
-  1. In the Azure Portal, search for Log Analytics Workspaces.
-2. Click Create and provide the following:
+3. **Enable Log Analytics**
+   
+  I. In the Azure Portal, search for Log Analytics Workspaces.
+  
+II. Click Create and provide the following:
 
-    3. Name: Enter a name (e.g., MyLogAnalyticsWorkspace).
-    4. Region: Select the same region as your VM.
-    5. Resource Group: Choose the resource group of your VM.
+     Name: Enter a name (e.g., MyLogAnalyticsWorkspace).
+     Region: Select the same region as your VM.
+     Resource Group: Choose the resource group of your VM.
 
 After creation, navigate to the workspace and note its Workspace ID and Key.
 
@@ -65,6 +67,7 @@ https://github.com/user-attachments/assets/f82099e0-90de-4aef-a090-1b7a8f5af65e
 
 
 5.  **Build a Custom Dashboard with Queries and Metrics to determine best practices to improve Virtual Machines.**
+   
    You can download the results of the total query as CSV for further reference. In a query where there is a lot of data to be fulfilled across multiple periods of time, a chart can be generated from the dashboard. In this case, all the alerts created needed more data in order to process a chart. Metrics can be shown for overall usage of VM as well as Alerts and Log Analytics workspaces created by creating a custom dashboard, allowing you to monitor performance, usage and use.
 
 
@@ -73,7 +76,7 @@ https://github.com/user-attachments/assets/bfa402cf-27af-4b10-8d98-5d4e23cb11e1
 
 
 
-7. **Link VM to Log Analytics Workspace (Optional)**
+6. **Link VM to Log Analytics Workspace (Optional)**
    
 NOTE: This approach is used to showcase how it used to work to create log analytics with the VM/RG. Currently is deprecated.
 
